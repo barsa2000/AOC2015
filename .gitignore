@@ -15,6 +15,7 @@ Cargo.lock
 
 .directory
 .vscode/
+main
 
 # Added by cargo
 
