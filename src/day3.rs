@@ -1,5 +1,5 @@
 use aoc_runner_derive::{aoc, aoc_generator};
-use std::collections::HashMap;
+use std::collections::HashSet;
 use std::error::Error;
 
 #[derive(Debug, PartialEq, Eq, PartialOrd, Ord, Copy, Clone, Hash)]
@@ -34,8 +34,8 @@ fn parse_input_day2(input: &str) -> Result<Vec<Move>, Box<dyn Error>> {
 fn part1(moves: &[Move]) -> usize {
     let mut p = Coord { x: 0, y: 0 };
 
-    let mut visited: HashMap<Coord, bool> = HashMap::new();
-    visited.insert(p, true);
+    let mut visited: HashSet<Coord> = HashSet::new();
+    visited.insert(p);
 
     moves.iter().for_each(|m| {
         match m {
@@ -44,9 +44,9 @@ fn part1(moves: &[Move]) -> usize {
             Move::Right => p.x += 1,
             Move::Left => p.x -= 1,
         }
-        visited.insert(p, true);
+        visited.insert(p);
     });
-    visited.keys().count()
+    visited.len()
 }
 
 #[aoc(day3, part2)]
@@ -56,8 +56,8 @@ fn part2(moves: &[Move]) -> usize {
 
     let mut p1_turn = true;
 
-    let mut visited: HashMap<Coord, bool> = HashMap::new();
-    visited.insert(p1, true);
+    let mut visited: HashSet<Coord> = HashSet::new();
+    visited.insert(p1);
 
     moves.iter().for_each(|m| {
         let mut p = if p1_turn { &mut p1 } else { &mut p2 };
@@ -68,9 +68,9 @@ fn part2(moves: &[Move]) -> usize {
             Move::Right => p.x += 1,
             Move::Left => p.x -= 1,
         }
-        visited.insert(*p, true);
+        visited.insert(*p);
     });
-    visited.keys().count()
+    visited.len()
 }
 
 #[cfg(test)]
