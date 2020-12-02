@@ -52,10 +52,6 @@ fn parse_input(input: &str) -> Result<Vec<Instruction>, Box<dyn Error>> {
         .collect()
 }
 
-// turn on 0,0 through 999,999
-// toggle 0,0 through 999,0
-// turn off 499,499 through 500,500
-
 #[aoc(day6, part1)]
 fn part1(instructions: &Vec<Instruction>) -> usize {
     let mut grid = [false; 1000 * 1000];
