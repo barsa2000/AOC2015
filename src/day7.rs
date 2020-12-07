@@ -98,6 +98,7 @@ mod tests {
     #[test]
     fn sample1() {
         let input = "\
+1 -> a
 123 -> x
 456 -> y
 NOT 5 -> z
@@ -107,12 +108,6 @@ x LSHIFT 2 -> f
 y RSHIFT 2 -> g
 NOT x -> h
 NOT y -> i";
-        // let input =
-        //     "123 -> x
-        //     456 -> y
-        //     x AND y -> d";
-        // println!("{:?}", parse_input(input));
-        // assert!(false);
-        assert_eq!(part1(&parse_input(input)), 1000);
+        assert_eq!(part1(&parse_input(input)), 1);
     }
 }
