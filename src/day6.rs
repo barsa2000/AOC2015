@@ -1,5 +1,5 @@
 use aoc_runner_derive::{aoc, aoc_generator};
-use std::{error::Error, ops::Range};
+use std::error::Error;
 
 #[derive(Debug, PartialEq, Eq, PartialOrd, Ord, Copy, Clone, Hash)]
 enum InstructionType {
@@ -36,12 +36,12 @@ fn parse_input(input: &str) -> Result<Vec<Instruction>, Box<dyn Error>> {
             let c1_str = split.next().unwrap();
             let c2_str = split.last().unwrap();
 
-            let mut split = c1_str.split(",");
+            let mut split = c1_str.split(',');
             let c1 = (
                 split.next().unwrap().parse::<usize>().unwrap(),
                 split.next().unwrap().parse::<usize>().unwrap(),
             );
-            let mut split = c2_str.split(",");
+            let mut split = c2_str.split(',');
             let c2 = (
                 split.next().unwrap().parse::<usize>().unwrap(),
                 split.next().unwrap().parse::<usize>().unwrap(),
@@ -53,7 +53,7 @@ fn parse_input(input: &str) -> Result<Vec<Instruction>, Box<dyn Error>> {
 }
 
 #[aoc(day6, part1)]
-fn part1(instructions: &Vec<Instruction>) -> usize {
+fn part1(instructions: &[Instruction]) -> usize {
     let mut grid = [false; 1000 * 1000];
 
     for instruction in instructions {
@@ -75,7 +75,7 @@ fn part1(instructions: &Vec<Instruction>) -> usize {
 }
 
 #[aoc(day6, part2)]
-fn part2(instructions: &Vec<Instruction>) -> usize {
+fn part2(instructions: &[Instruction]) -> usize {
     let mut grid = [0_usize; 1000 * 1000];
 
     for instruction in instructions {
@@ -94,7 +94,7 @@ fn part2(instructions: &Vec<Instruction>) -> usize {
             }
         }
     }
-    grid.iter().map(|p| *p).sum()
+    grid.iter().copied().sum()
 }
 
 #[cfg(test)]

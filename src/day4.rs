@@ -20,7 +20,7 @@ fn part1(key: &str) -> u64 {
             return i;
         }
     }
-    return 0;
+    unreachable!();
     // hasher.input(key);
 }
 
@@ -41,12 +41,12 @@ fn part2(key: &str) -> u64 {
             return i;
         }
     }
-    return 0;
+    unreachable!();
 }
 
 #[cfg(test)]
 mod tests {
-    use super::*;
+    // use super::*;
 
     // #[test]
     // fn sample1() {

@@ -14,7 +14,7 @@ fn parse_input_day2(input: &str) -> Result<Vec<MyBox>, Box<dyn Error>> {
     input
         .lines()
         .map(|l| {
-            let mut measures = l.trim().split("x").map(|m| m.parse::<u32>().unwrap());
+            let mut measures = l.trim().split('x').map(|m| m.parse::<u32>().unwrap());
             Ok(MyBox {
                 l: measures.next().unwrap(),
                 w: measures.next().unwrap(),

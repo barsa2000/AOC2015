@@ -6,23 +6,21 @@ fn part1(input: &str) -> usize {
         .lines()
         .filter(|l| {
             if l.chars()
-                .filter(|&c| match c {
-                    'a' | 'e' | 'i' | 'o' | 'u' => true,
-                    _ => false,
-                })
-                .count() < 3
+                .filter(|&c| matches!(c, 'a' | 'e' | 'i' | 'o' | 'u'))
+                .count()
+                < 3
             {
                 return false;
             }
 
-            if l.chars().zip(l.chars().skip(1)).any(|(a, b)| a == b) == false {
+            if !l.chars().zip(l.chars().skip(1)).any(|(a, b)| a == b) {
                 return false;
             }
 
-            if l.chars().zip(l.chars().skip(1)).any(|ab| match ab {
-                ('a', 'b') | ('c', 'd') | ('p', 'q') | ('x', 'y') => true,
-                _ => false,
-            }) {
+            if l.chars()
+                .zip(l.chars().skip(1))
+                .any(|ab| matches!(ab, ('a', 'b') | ('c', 'd') | ('p', 'q') | ('x', 'y')))
+            {
                 return false;
             }
 
@@ -34,31 +32,31 @@ fn part1(input: &str) -> usize {
 #[aoc(day5, part2)]
 fn part2(input: &str) -> usize {
     input
-    .lines()
-    .filter(|l| {
-        if l.len() < 4{
-            return false;
-        }
-
-        let mut found = false;
-        for i in 0..l.len()-3 {
-            let pair = &l[i..i+2];
-            if (&l[i+2..]).contains(pair) {
-                found = true;
-                break;
+        .lines()
+        .filter(|l| {
+            if l.len() < 4 {
+                return false;
             }
-        }
-        if !found {
-            return false;
-        }
 
-        if l.chars().zip(l.chars().skip(2)).any(|(a, b)| a == b) == false {
-            return false;
-        }
+            let mut found = false;
+            for i in 0..l.len() - 3 {
+                let pair = &l[i..i + 2];
+                if (&l[i + 2..]).contains(pair) {
+                    found = true;
+                    break;
+                }
+            }
+            if !found {
+                return false;
+            }
 
-        true
-    })
-    .count()
+            if !l.chars().zip(l.chars().skip(2)).any(|(a, b)| a == b) {
+                return false;
+            }
+
+            true
+        })
+        .count()
 }
 
 #[cfg(test)]
