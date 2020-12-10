@@ -21,7 +21,7 @@ Advent of Code 2015 solutions written in [Rust](https://www.rust-lang.org/) :cra
 | [Day 5: Doesn't He Have Intern-Elves For This?](https://adventofcode.com/2015/day/5)   | [day5.rs](src/day5.rs)   |  ✓  |     **236** |  ✓  |         **51** |
 | [Day 6: Probably a Fire Hazard](https://adventofcode.com/2015/day/6)                   | [day6.rs](src/day6.rs)   |  ✓  |  **543903** |  ✓  |   **14687245** |
 | [Day 7: Some Assembly Required](https://adventofcode.com/2015/day/7)                   | [day7.rs](src/day7.rs)   |  ✓  |   **46065** |  ✓  |      **14134** |
-| [Day 8: Matchsticks](https://adventofcode.com/2015/day/8)                              | [day8.rs](src/day8.rs)   |     |             |     |                |
+| [Day 8: Matchsticks](https://adventofcode.com/2015/day/8)                              | [day8.rs](src/day8.rs)   |  ✓  |   **1333**  |  ✓  |       **2046** |
 | [Day 9: All in a Single N](https://adventofcode.com/2015/day/9)                        | [day9.rs](src/day9.rs)   |     |             |     |                |
 | [Day 10: Elves Look, Elves](https://adventofcode.com/2015/day/10)                      | [day10.rs](src/day10.rs) |     |             |     |                |
 | [Day 11: Corporate Po](https://adventofcode.com/2015/day/11)                           | [day11.rs](src/day11.rs) |     |             |     |                |
