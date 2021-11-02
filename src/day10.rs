@@ -1,6 +1,4 @@
 use aoc_runner_derive::{aoc, aoc_generator};
-use crypto::buffer::ReadBuffer;
-use itertools::Itertools;
 
 #[aoc_generator(day10)]
 pub fn parse_input_as_numbers(input: &str) -> Vec<u8> {
@@ -10,7 +8,7 @@ pub fn parse_input_as_numbers(input: &str) -> Vec<u8> {
         .collect()
 }
 
-fn look_and_say(input: &Vec<u8>) -> Vec<u8> {
+fn look_and_say(input: &[u8]) -> Vec<u8> {
     let mut res = vec![];
     let mut iter = input.iter().peekable();
 
@@ -31,7 +29,7 @@ fn look_and_say(input: &Vec<u8>) -> Vec<u8> {
 }
 
 #[aoc(day10, part1)]
-fn part1(input: &Vec<u8>) -> usize {
+fn part1(input: &[u8]) -> usize {
     let mut v = input.to_owned();
     for _ in 0..40 {
         v = look_and_say(&v);
@@ -40,7 +38,7 @@ fn part1(input: &Vec<u8>) -> usize {
 }
 
 #[aoc(day10, part2)]
-fn part2(input: &Vec<u8>) -> usize {
+fn part2(input: &[u8]) -> usize {
     let mut v = input.to_owned();
     for _ in 0..50 {
         v = look_and_say(&v);
