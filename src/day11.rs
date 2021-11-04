@@ -1,13 +1,12 @@
-use std::borrow::BorrowMut;
-
 use aoc_runner_derive::{aoc, aoc_generator};
+use itertools::Itertools;
 
 #[aoc_generator(day11)]
 fn parse_input(input: &str) -> Vec<char> {
     input.chars().rev().collect()
 }
 
-fn is_valid(chars: &Vec<char>) -> bool {
+fn is_valid(chars: &[char]) -> bool {
     let mut found_increasing_straight = false;
     let mut was_increasing = false;
     let mut last_char = '\0';
@@ -54,7 +53,7 @@ fn inc(s: &mut Vec<char>) {
     }
 }
 
-fn find_next_valid(chars: &Vec<char>) -> String {
+fn find_next_valid(chars: &[char]) -> String {
     let mut chars = chars.to_owned();
 
     loop {
@@ -69,13 +68,13 @@ fn find_next_valid(chars: &Vec<char>) -> String {
 }
 
 #[aoc(day11, part1)]
-fn part1(chars: &Vec<char>) -> String {
+fn part1(chars: &[char]) -> String {
     find_next_valid(chars).chars().rev().collect()
 }
 
 #[aoc(day11, part2)]
-fn part2(chars: &Vec<char>) -> String {
-    find_next_valid(&find_next_valid(chars).chars().collect())
+fn part2(chars: &[char]) -> String {
+    find_next_valid(&find_next_valid(chars).chars().collect_vec())
         .chars()
         .rev()
         .collect()

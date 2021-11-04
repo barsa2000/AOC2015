@@ -1,5 +1,5 @@
 use aoc_runner_derive::aoc_lib;
-#[macro_use]
+// #[macro_use]
 extern crate json;
 
 mod day01;

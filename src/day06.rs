@@ -20,10 +20,10 @@ fn parse_input(input: &str) -> Result<Vec<Instruction>, Box<dyn Error>> {
             let mut s = l;
             let instruction_type;
 
-            if s.find("turn on").is_some() {
+            if s.contains("turn on") {
                 instruction_type = InstructionType::TurnOn;
                 s = s.trim_start_matches("turn on ");
-            } else if s.find("turn off").is_some() {
+            } else if s.contains("turn off") {
                 instruction_type = InstructionType::TurnOff;
                 s = s.trim_start_matches("turn off ");
             } else {
