@@ -14,15 +14,15 @@ Advent of Code 2015 solutions written in [Rust](https://www.rust-lang.org/) :cra
 
 | Problem                                                                                | Solution                 | #1  |  #1 Answer  | #2  |      #2 Answer |
 | :--------------------------------------------------------------------------------      | :----------------------- | :-: | ----------: | :-: | -------------: |
-| [Day 1: Not Quite Lisp](https://adventofcode.com/2015/day/1)                           | [day1.rs](src/day1.rs)   |  ✓  |     **280** |  ✓  |       **1797** |
-| [Day 2: I Was Told There Would Be No Math](https://adventofcode.com/2015/day/2)        | [day2.rs](src/day2.rs)   |  ✓  | **1586300** |  ✓  |    **3737498** |
-| [Day 3: Perfectly Spherical Houses in a Vacuum](https://adventofcode.com/2015/day/3)   | [day3.rs](src/day3.rs)   |  ✓  |    **2565** |  ✓  |       **2639** |
-| [Day 4: The Ideal Stocking Stuffer](https://adventofcode.com/2015/day/4)               | [day4.rs](src/day4.rs)   |  ✓  |  **254575** |  ✓  |    **1038736** |
-| [Day 5: Doesn't He Have Intern-Elves For This?](https://adventofcode.com/2015/day/5)   | [day5.rs](src/day5.rs)   |  ✓  |     **236** |  ✓  |         **51** |
-| [Day 6: Probably a Fire Hazard](https://adventofcode.com/2015/day/6)                   | [day6.rs](src/day6.rs)   |  ✓  |  **543903** |  ✓  |   **14687245** |
-| [Day 7: Some Assembly Required](https://adventofcode.com/2015/day/7)                   | [day7.rs](src/day7.rs)   |  ✓  |   **46065** |  ✓  |      **14134** |
-| [Day 8: Matchsticks](https://adventofcode.com/2015/day/8)                              | [day8.rs](src/day8.rs)   |  ✓  |    **1333** |  ✓  |       **2046** |
-| [Day 9: All in a Single N](https://adventofcode.com/2015/day/9)                        | [day9.rs](src/day9.rs)   |  ✓  |     **251** |  ✓  |        **898** |
+| [Day 1: Not Quite Lisp](https://adventofcode.com/2015/day/1)                           | [day01.rs](src/day01.rs) |  ✓  |     **280** |  ✓  |       **1797** |
+| [Day 2: I Was Told There Would Be No Math](https://adventofcode.com/2015/day/2)        | [day02.rs](src/day02.rs) |  ✓  | **1586300** |  ✓  |    **3737498** |
+| [Day 3: Perfectly Spherical Houses in a Vacuum](https://adventofcode.com/2015/day/3)   | [day03.rs](src/day03.rs) |  ✓  |    **2565** |  ✓  |       **2639** |
+| [Day 4: The Ideal Stocking Stuffer](https://adventofcode.com/2015/day/4)               | [day04.rs](src/day04.rs) |  ✓  |  **254575** |  ✓  |    **1038736** |
+| [Day 5: Doesn't He Have Intern-Elves For This?](https://adventofcode.com/2015/day/5)   | [day05.rs](src/day05.rs) |  ✓  |     **236** |  ✓  |         **51** |
+| [Day 6: Probably a Fire Hazard](https://adventofcode.com/2015/day/6)                   | [day06.rs](src/day06.rs) |  ✓  |  **543903** |  ✓  |   **14687245** |
+| [Day 7: Some Assembly Required](https://adventofcode.com/2015/day/7)                   | [day07.rs](src/day07.rs) |  ✓  |   **46065** |  ✓  |      **14134** |
+| [Day 8: Matchsticks](https://adventofcode.com/2015/day/8)                              | [day08.rs](src/day08.rs) |  ✓  |    **1333** |  ✓  |       **2046** |
+| [Day 9: All in a Single N](https://adventofcode.com/2015/day/9)                        | [day09.rs](src/day09.rs) |  ✓  |     **251** |  ✓  |        **898** |
 | [Day 10: Elves Look, Elves](https://adventofcode.com/2015/day/10)                      | [day10.rs](src/day10.rs) |  ✓  |  **329356** |  ✓  |    **4666278** |
 | [Day 11: Corporate Po](https://adventofcode.com/2015/day/11)                           | [day11.rs](src/day11.rs) |  ✓  | **hepxxwv** |  ✓  |   **hepyyxww** |
 | [Day 12: JSAbacusFramewor](https://adventofcode.com/2015/day/12)                       | [day12.rs](src/day12.rs) |  ✓  |  **191164** |  ✓  |      **87842** |
