@@ -73,16 +73,3 @@ fn part2(input: &HashMap<String, ((u64, u64), u64)>) -> u64 {
 
     *points.values().max().unwrap()
 }
-#[cfg(test)]
-mod tests {
-    use super::*;
-
-    #[test]
-    fn sample1() {
-        let input = "\
-Comet can fly 14 km/s for 10 seconds, but then must rest for 127 seconds.
-Dancer can fly 16 km/s for 11 seconds, but then must rest for 162 seconds.
-";
-        assert_eq!(part1(&parse_input(input)), 11120);
-    }
-}
