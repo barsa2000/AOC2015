@@ -1,7 +1,6 @@
 use aoc_runner_derive::{aoc, aoc_generator};
 use itertools::Itertools;
 use regex::Regex;
-use std::cmp;
 use std::collections::HashMap;
 use std::str::FromStr;
 
